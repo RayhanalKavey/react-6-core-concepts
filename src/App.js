@@ -24,23 +24,42 @@ function LoadComments() {
     <div>
       <h1 className="boxstyle">{comments.length} comments found.</h1>
 
-      {comments.map((comment) => DisplayComment(comment))}
+      {/* {comments.map((comment) => DisplayComment(comment))} */}
+      {comments.map((comment) => (
+        <DisplayComment
+          name={comment.name}
+          id={comment.id}
+          email={comment.email}
+          body={comment.body}
+        ></DisplayComment>
+      ))}
     </div>
   );
 }
-
 function DisplayComment(props) {
-  // console.log(props);
-  const { id, name, email, body } = props;
+  console.log(props);
   return (
     <div className="boxstyle">
-      <h3>Name: {name}</h3>
-      <h4>ID: {id}</h4>
-      <p>Email: {email}</p>
-      <p>Body: {body}</p>
+      <h3>Name: {props.name}</h3>
+      <h4>ID: {props.id}</h4>
+      <p>Email: {props.email}</p>
+      <p>Body: {props.body}</p>
     </div>
   );
 }
+// or;
+// function DisplayComment(props) {
+//   // console.log(props);
+//   const { id, name, email, body } = props;
+//   return (
+//     <div className="boxstyle">
+//       <h3>Name: {name}</h3>
+//       <h4>ID: {id}</h4>
+//       <p>Email: {email}</p>
+//       <p>Body: {body}</p>
+//     </div>
+//   );
+// }
 ////count component
 function Count() {
   const [count, setCount] = useState(0);
