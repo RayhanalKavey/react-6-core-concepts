@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.boxstyle {
+  background-color: beige;
+
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid brown;
+}
+.boxstyle-parent {
+  background-color: rgb(189, 189, 149);
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid brown;
+}
